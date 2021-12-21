@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Soal 2</title>
+        <meta name =”author” content="Nicholas_Christopher_Rudy 2172020">
+    </head>
+    <style>
+        .name{
+            width: 120px;
+            height: 10px;
+            display: inline-block;
+            color: black;
+            text-align: center;
+            font-size: 15px;
+        }
+        .n{
+            background-color: rgb(230, 230, 230);
+            border: 1px solid rgb(109, 107, 107);
+            width: 120px;
+            height: 35px;
+            display: inline-block;
+            text-align: center;
+            padding-top: 20px;
+            z-index: -1;
+        }
+        .bg{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 60px;
+            justify-content: center;
+            text-align: center;
+            font-size: 40px;
+            background-color: white;
+            z-index: 2;
+        }
+        .bg.a{
+            display: none;
+        }
+    </style>
+    <body style="background-color:lightgray;">
+        <div class="bg"><b>Press any key to get the keyCode</b></div>
+        <div class="name"><b>event.key</b></div>
+        <div class="name"><b>event.keyCode</b></div>
+        <div class="name"><b>event.code</b></div> 
+        <br>
+        <div class="n" id="key"></div>
+        <div class="n" id="keycode"></div>
+        <div class="n" id="eventcode"></div>  
+    <script>
+        let bg = document.querySelector(".bg");
+        let k = document.getElementById("key");
+        let kc = document.getElementById("keycode");
+        let ec = document.getElementById("eventcode");
+        document.addEventListener('keydown',(b)=>{
+            bg.classList.add('a');
+            k.innerHTML = b.key;
+            k.style.fontWeight = 'bold';
+            kc.innerHTML = b.keyCode;
+            kc.style.fontWeight = 'bold';
+            ec.innerHTML = b.code;
+            ec.style.fontWeight = 'bold';
+        })
+    </script>
+    </body>
+    </html>

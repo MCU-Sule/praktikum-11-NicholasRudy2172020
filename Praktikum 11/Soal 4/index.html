@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Soal 4</title>
+        <meta name =”author” content="Nicholas_Christopher_Rudy 2172020">
+    </head>
+    <style>
+        table{
+            margin-left: 25%;
+        }
+        td{
+            border: 2px solid black;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+        }
+        #container{
+            width: 250px;
+            height: 65px;
+            padding-left: 600px;
+        }
+        #hasil{
+            margin-left: 25%;
+            width: 580px;
+            height: 100px;
+            border: 2px solid black;
+        }
+        #batu, #gunting, #kertas{
+           background-color: white;
+           border: 2px solid black;
+           width: 55px;
+       }
+       input{
+           width: 60px;
+           height: 50px;
+       }
+    </style>
+    <body>
+        <div class="score">  
+                <div class="movesleft">
+                    <table> 
+                        <tr> 
+                            <td>P</td> <td> </td> <td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td>
+                                </tr><tr> 
+                            <td>E</td> <td> </td> <td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td>
+                        </tr>
+                    </table>
+                </div>       
+        </div><br>
+        <textarea id ="hasil"></textarea> <br><br>
+        <div id = "container">
+            <input type="button" id="batu" value="Batu" onclick="Batu()">
+            <input type="button" id="gunting" value="Gunting" onclick="Gunting()">
+            <input type="button" id="kertas"value="Kertas" onclick="Kertas()">
+        </div>
+        <script>
+            let i;
+            let player="P"
+            let comp="E"
+            let batu=document.querySelector("#batu").value 
+            let gunting=document.querySelector("#gunting").value
+            let kertas=document.querySelector("#kertas").value
+            let random=Math.round(Math.random()*3)
+            let hasil=document.querySelector("#hasil")
+            function Batu(){
+                i=1 
+                a=1
+                let random= Math.round(Math.random()*3)
+                if (random== 0){
+                    hasil.innerHTML="Batu(User) ketemu Batu(Comp), Draw"
+                }
+                else if (random== 1){
+                    i = i + 1
+                    hasil.innerHTML="Batu(User) ketemu gunting(Comp), User maju"
+                }
+                else {
+                    a = a + 1
+                    hasil.innerHTML="Batu(User) ketemu Kertas(Comp), Comp maju"
+                }}
+            function Gunting(){
+                i= 0
+                let random = Math.round(Math.random()*3)
+                if (random== 1){
+                    hasil.innerHTML="Gunting(User) ketemu Gunting(Comp), Draw"
+                }
+                else if(random== 0){
+                    a = a + 1
+                    hasil.innerHTML="Gunting(User) ketemu Batu(Comp), Comp maju"
+                }
+                else{
+                    i = i + 1
+                    hasil.innerHTML="Gunting(User) ketemu Kertas(Comp), User maju"
+                }}
+            function Kertas(){
+                i = 0
+                a = 0
+                let random = Math.round(Math.random()*3)
+                if (random== 2){
+                    hasil.innerHTML="Kertas(User) ketemu Kertas(Comp), Draw"
+                }
+                else if (random== 1){
+                    hasil.innerHTML="Kertas(User) ketemu Gunting(Comp), Comp maju"
+                    a = a + 1
+                }
+                else {
+                    hasil.innerHTML="Kertas(User) ketemu Batu(Comp), user maju"
+                    i = i + 1}}
+        </script>
+    </body>
+    </html>

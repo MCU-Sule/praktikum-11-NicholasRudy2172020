@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Soal 3</title>
+        <meta name =”author” content="Nicholas_Christopher_Rudy 2172020">
+    </head>
+    <style>
+        table{
+            margin-left: 41%;
+            padding : 0;
+        }
+        td{
+            background-color: lightcyan;
+            border: 2px solid skyblue;
+            width: 120px;
+            height: 120px;
+        }
+        img{
+            height: 120px;
+            width: 120px;
+            display:inline-block;
+        }
+        #doge{
+            width: 500px;
+            height: 100px;
+            margin-left: 33%;
+            margin-top: 10px;
+        }
+        #restart{
+            background-color:salmon;
+            height: 40px;
+            margin-left: 46%;
+            margin-top: 45px;
+        }
+    </style>
+    <body>
+        <table>
+            <tr>
+                <td id="t1" ondrop="drop(event); check()" ondragover="allowDrop(event)"></td>
+                <td id="t2" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            </tr>
+            <tr>
+                <td id="t3" ondrop="drop(event); check()" ondragover="allowDrop(event)"></td>
+                <td id="t4" ondrop="drop(event); check()" ondragover="allowDrop(event)"></td>
+            </tr>
+        </table>
+        <div id = "doge">
+        <img src="assets/1.jpg" id="dog1" draggable="true" ondragstart="drag(event)">
+        <img src="assets/2.jpg" id="dog2" draggable="true" ondragstart="drag(event)">
+        <img src="assets/3.jpg" id="dog3" draggable="true" ondragstart="drag(event)">
+        <img src="assets/4.jpg" id="dog4" draggable="true" ondragstart="drag(event)">
+    </div>
+    <button id="restart" onClick="window.location.reload();"><b>Restart Game</b></button>
+    <script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+    </script>
+    </body>
+    </html>

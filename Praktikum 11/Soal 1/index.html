@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>Soal 1</title>
+        <meta name =”author” content="Nicholas_Christopher_Rudy 2172020">
+    </head>
+    <style>
+        #text{
+            padding-left: 400px;
+            padding-top: 300px;
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .container {
+            padding-top: 5px;
+            padding-left: 15px;
+            width: 100px;
+            height: 25px;
+            transform: translateX(650px) translateY(250px);
+            background-color:darksalmon;
+        }
+        #speedbox{
+            background: lightsalmon; 
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            border: none;
+        }
+    </style>
+    <body style="background-color: lightsalmon;">
+        <div id="text">We Love Programming!</div>
+        <div class="container">
+        Speed: <input type="number" id="speedbox" min="1" max="10" onchange="animasi()">
+        </div>
+        <script>
+            let a = document.getElementById("speedbox").value
+            let b = document.getElementById("text").innerText
+            
+            function animasi(){
+                let value = document.getElementById("speedbox").value
+                let d = 0
+                let p = value*100
+                let q = 1200 - p
+                setTimeout(function kata(){
+                    let c=b.slice(0,1); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,2); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,4); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,5); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,6); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,7); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,9); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,10); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,11); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,12); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,14); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,15); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,16); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,17); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,18); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+               d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,19); 
+                    document.getElementById("text").innerText=c;
+                }, d)
+                d+=q
+                setTimeout(function kata(){
+                    let c=b.slice(0,20); 
+                    document.getElementById("text").innerText=c;
+                }, d)}
+        </script>
+    </body>
+    </html>
